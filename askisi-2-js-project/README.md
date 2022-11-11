@@ -1,6 +1,6 @@
 
 
-# my-first-js-project
+# Askisi-2-Js-Project 
 
 ΆΣΚΗΣΗ 2
 <br>
