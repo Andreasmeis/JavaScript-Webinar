@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="el">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Askisi 2</title>
+        <style>
+            .hot{
+                color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Εφημερίδα</h1>
+        <div id="arthra"></div>
+
+
+        <script>
+            var arthra = [{
+                "titlos": "Stim",
+                "media": "http://dummyimage.com/300x300.jpg/5fa2dd/ffffff",
+                "keimeno": "donec ut dolor morbi",
+                "likes": 805
+            }, {
+                "titlos": "Vagram",
+                "media": "http://dummyimage.com/300x300.jpg/5fa2dd/ffffff",
+                "keimeno": "montes nascetur ridiculus mus vivamus",
+                "likes": 503
+            }, {
+                "titlos": "Konklab",
+                "media": "http://dummyimage.com/300x300.jpg/dddddd/000000",
+                "keimeno": "at nunc commodo placerat praesent",
+                "likes": 27
+            }, {
+                "titlos": "It",
+                "media": "http://dummyimage.com/300x300.jpg/cc0000/ffffff",
+                "keimeno": "id nulla ultrices aliquet maecenas leo odio condimentum id",
+                "likes": 711
+            }, {
+                "titlos": "Bitwolf",
+                "media": "http://dummyimage.com/300x300.jpg/5fa2dd/ffffff",
+                "keimeno": "magnis dis parturient montes",
+                "likes": 68
+            }];
+
+            for(var i = 0 ; i<arthra.length ; i++){
+                var tester = '';
+                if (arthra[i].likes>=500){
+                    tester = 'hot'
+                }
+                var arthro ='<div><h2 class="'+tester+'">'+tester+' '+arthra[i].titlos+'</h2>' +
+                    '<img src="'+arthra[i].media+'"><p>'+arthra[i].keimeno+'</p>' +
+                    '<h4>'+arthra[i].likes+'</h4></div><br>';
+                console.log(arthro);
+                document.querySelector('#arthra').innerHTML += arthro;
+            }
+        </script>
+    </body>
+</html>
